@@ -1,0 +1,7 @@
+{
+    "contacts":[
+        {"id":1,"name":"majid abbasi","phoneNumber":"092222222"},
+        {"id":2,"name":"zahra","phoneNumber":"092222223"},
+        {"id":3,"name":"yegane","phoneNumber":"092222224"}
+    ]
+}
