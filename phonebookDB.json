@@ -2,23 +2,13 @@
   "contacts": [
     {
       "id": 1,
-      "name": "aliz",
-      "phoneNumber": "099"
+      "name": "alireza",
+      "phoneNumber": "099555554"
     },
     {
       "id": 2,
       "name": "majid",
-      "phoneNumber": "123123"
-    },
-    {
-      "id": 3,
-      "name": "a",
-      "phoneNumber": "2342345"
-    },
-    {
-      "id": 4,
-      "name": "b",
-      "phoneNumber": "3434"
+      "phoneNumber": "085555789"
     }
   ]
 }

@@ -2,7 +2,7 @@ import { Box, Button, Modal, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Api from "../../API/Api";
 import appSetting from "../../app.setting";
-
+import "./Phonebook.css";
 const PhonebookEdit = (props) => {
   const [contact, setContact] = useState(props.contact);
   const api = new Api(appSetting.api.url);
@@ -17,7 +17,10 @@ const PhonebookEdit = (props) => {
     boxShadow: 24,
     p: 4,
     borderRadius: 5,
-    display: "block",
+    display: "flex",
+    flexDirection: "column",
+    height: "250px",
+    justifyContent: "space-between",
   };
   useEffect(() => {
     setContact(props.contact);
