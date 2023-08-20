@@ -1,3 +1,8 @@
+# Phonebook Project
+![image](https://github.com/mjd132/Phonebook-React/assets/40965524/56cddeff-711b-41fa-afa7-b21d8ffa87ee)
+![image](https://github.com/mjd132/Phonebook-React/assets/40965524/33c756f0-4b94-4c4c-b9a0-ac0669b595a9)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
