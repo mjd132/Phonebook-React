@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import appSetting from "../app.setting";
+
 const usePost = (path, data) => {
   const [isPending, setIsPending] = useState(true);
   setIsPending(true);

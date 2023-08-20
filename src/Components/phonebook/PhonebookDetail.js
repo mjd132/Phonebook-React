@@ -1,12 +1,24 @@
-import { Paper, Typography } from "@mui/material";
-import React from "react";
+import { Button, Paper, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import useFetch from "../../API/useFetch";
 import { WidthFullRounded } from "@mui/icons-material";
+import appSetting from "../../app.setting";
+import Api from "../../API/Api";
 
 const PhonebookDetail = () => {
   const { id } = useParams();
-  const { data: contact, isPending, error } = useFetch("contacts/" + id);
+  const api = new Api(appSetting.api.url);
+  const [contact, setContact] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    api
+      .get(`/contacts/${id}`)
+      .then((data) => setContact(data))
+      .catch((error) => setError(error.message));
+  }, []);
+
   return (
     <>
       {contact && (

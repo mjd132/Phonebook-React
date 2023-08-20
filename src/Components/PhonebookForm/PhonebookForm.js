@@ -1,17 +1,19 @@
 import { Button, Grid, Paper, TextField } from "@mui/material";
 import React, { useState } from "react";
+import usePost from "../../API/usePost";
+import appSetting from "../../app.setting";
+import Api from "../../API/Api";
 // import { data, phonebook, setPhonebook } from "../consts/data";
 
 const PhonebookForm = () => {
-  const [contact, setContact] = useState({ name: "", phoneNumber: "" });
+  const [contact, setContact] = useState({ id: "", name: "", phoneNumber: "" });
+  const api = new Api(appSetting.api.url);
   const handleAddContact = () => {
-    // setPhonebook(...phonebook, {
-    //   no: phonebook.length,
-    //   name: name,
-    //   phoneNumber: phoneNumber,
-    // });
     console.log(contact);
-    setContact({ name: "", phoneNumber: "" });
+    // const { isPending } = usePost("contacts", contact);
+    api.post("/contacts", contact).catch((err) => console.log(err.message));
+
+    setContact({ id: "", name: "", phoneNumber: "" });
   };
 
   return (

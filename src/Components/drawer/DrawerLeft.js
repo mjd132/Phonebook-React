@@ -35,6 +35,15 @@ const DrawerLeft = () => {
       </ListItem>
       <Divider />
       <List>
+        <ListItem disablePadding>
+          <ListItemButton onClick={() => navigate(`/add-contact`)}>
+            <ListItemText primary="Add Contact"></ListItemText>
+          </ListItemButton>
+        </ListItem>
+      </List>
+      <Divider />
+
+      <List>
         {drawerList.map((text, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton onClick={() => navigate(`${text.route}`)}>
